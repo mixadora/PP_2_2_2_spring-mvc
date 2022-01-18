@@ -1,6 +1,5 @@
 package web.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +16,7 @@ public class CarsController {
         if (count == null || count > 5) {
             count = 5;
         }
-        model.addAttribute("messages", carService.getListCars(count));
+        model.addAttribute("messages", carService.getListCar());
         model.addAttribute("locales", count);
         return "cars";
     }
