@@ -16,7 +16,7 @@ public class CarsController {
         if (count == null || count > 5) {
             count = 5;
         }
-        model.addAttribute("messages", carService.getListCar());
+        model.addAttribute("messages", carService.countCars(count));
         model.addAttribute("locales", count);
         return "cars";
     }
